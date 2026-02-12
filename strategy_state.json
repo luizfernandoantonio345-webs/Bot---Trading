@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "bot": {
+    "status": "RUNNING",
+    "modo": "normal",
+    "ultima_atualizacao": null
+  },
+  "operacao": {
+    "trade_ativo": false,
+    "ticket": null,
+    "direcao": null,
+    "score_entrada": null,
+    "confianca": null,
+    "hora_entrada": null
+  },
+  "controle": {
+    "perdas_consecutivas": 0,
+    "trades_hoje": 0,
+    "pnl_dia": 0.0,
+    "ultimo_dia": null
+  },
+  "direcao": {
+    "BUY": {
+      "wins": 0,
+      "loss": 0
+    },
+    "SELL": {
+      "wins": 0,
+      "loss": 0
+    }
+  },
+  "sessao": {
+    "LONDRES": {
+      "wins": 0,
+      "loss": 0
+    },
+    "NY": {
+      "wins": 0,
+      "loss": 0
+    }
+  },
+  "score_bins": {},
+  "bias": {
+    "BUY": 0,
+    "SELL": 0
+  },
+  "stats": {
+    "BUY": {
+      "wins": 0,
+      "loss": 0
+    },
+    "SELL": {
+      "wins": 0,
+      "loss": 0
+    }
+  },
+  "bias_adjust": {
+    "BUY": 0,
+    "SELL": 0
+  }
+}
