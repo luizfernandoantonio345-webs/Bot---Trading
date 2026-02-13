@@ -197,6 +197,16 @@ Para dúvidas ou problemas:
 - Verifique o histórico em `trade_memory.db`
 - Ajuste configurações conforme necessário
 
+## 💡 Ideias Futuras
+
+Confira o documento [IDEAS_FUTURAS.md](IDEAS_FUTURAS.md) com **10 ideias estratégicas** para evolução do bot:
+- Sistema de Aprendizado por Reforço
+- Dashboard Web Interativo
+- Notificações Multi-Canal
+- Múltiplas Estratégias Paralelas
+- Backtesting Engine Avançado
+- E muito mais!
+
 ---
 
 **⚡ BOT PRONTO PARA PRODUÇÃO ⚡**
