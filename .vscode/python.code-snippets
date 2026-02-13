@@ -1,0 +1,269 @@
+{
+    "Trading Strategy Template": {
+        "prefix": "strategy",
+        "body": [
+            "def ${1:strategy_name}(data: dict) -> dict:",
+            "    \"\"\"",
+            "    ${2:Strategy description}",
+            "    ",
+            "    Args:",
+            "        data: Market data with OHLCV",
+            "    ",
+            "    Returns:",
+            "        Signal dict with action and confidence",
+            "    \"\"\"",
+            "    # Extract data",
+            "    close = data['close']",
+            "    high = data['high']",
+            "    low = data['low']",
+            "    volume = data['volume']",
+            "    ",
+            "    # Calculate indicators",
+            "    ${3:# Your indicators here}",
+            "    ",
+            "    # Generate signal",
+            "    signal = 'NEUTRAL'",
+            "    confidence = 0",
+            "    ",
+            "    ${4:# Your logic here}",
+            "    ",
+            "    return {",
+            "        'signal': signal,",
+            "        'confidence': confidence,",
+            "        'reason': '${5:Reason for signal}'",
+            "    }",
+            "$0"
+        ],
+        "description": "Template for creating a trading strategy"
+    },
+    "Risk Check": {
+        "prefix": "riskcheck",
+        "body": [
+            "# Risk validation",
+            "if ${1:condition}:",
+            "    logger.warning('Risk limit exceeded: ${2:reason}')",
+            "    return False",
+            "$0"
+        ],
+        "description": "Add risk validation check"
+    },
+    "Try-Except Binance": {
+        "prefix": "tryb",
+        "body": [
+            "try:",
+            "    ${1:# Binance API call}",
+            "except BinanceAPIException as e:",
+            "    logger.error(f'Binance API error: {e}')",
+            "    ${2:# Handle error}",
+            "except Exception as e:",
+            "    logger.error(f'Unexpected error: {e}')",
+            "    ${3:# Handle error}",
+            "$0"
+        ],
+        "description": "Try-except for Binance API calls"
+    },
+    "Logger Setup": {
+        "prefix": "logger",
+        "body": [
+            "import logging",
+            "",
+            "logger = logging.getLogger(__name__)",
+            "logger.setLevel(logging.${1|DEBUG,INFO,WARNING,ERROR|})",
+            "",
+            "# Console handler",
+            "console = logging.StreamHandler()",
+            "console.setLevel(logging.${2|DEBUG,INFO,WARNING,ERROR|})",
+            "formatter = logging.Formatter(",
+            "    '%(asctime)s - %(name)s - %(levelname)s - %(message)s'",
+            ")",
+            "console.setFormatter(formatter)",
+            "logger.addHandler(console)",
+            "$0"
+        ],
+        "description": "Setup logger for module"
+    },
+    "Position Size Calculation": {
+        "prefix": "possize",
+        "body": [
+            "from core.position_sizer import PositionSizer",
+            "",
+            "sizer = PositionSizer()",
+            "result = sizer.calculate(",
+            "    account_balance=${1:10000},",
+            "    entry_price=${2:50000},",
+            "    stop_loss_price=${3:49000},",
+            "    risk_per_trade=${4:0.01},  # 1%",
+            "    take_profit_price=${5:52000}",
+            ")",
+            "",
+            "if result.is_valid:",
+            "    size = result.size",
+            "    logger.info(f'Position size: {size}, Risk: ${result.risk_amount}')",
+            "$0"
+        ],
+        "description": "Calculate position size with risk management"
+    },
+    "Rate Limiter Check": {
+        "prefix": "ratelimit",
+        "body": [
+            "from core.rate_limiter import RateLimiter",
+            "",
+            "limiter = RateLimiter()",
+            "if limiter.check_and_consume('${1:endpoint}', weight=${2:1}):",
+            "    ${3:# Execute API call}",
+            "else:",
+            "    logger.warning('Rate limit exceeded, waiting...')",
+            "    time.sleep(1)",
+            "$0"
+        ],
+        "description": "Check rate limit before API call"
+    },
+    "Circuit Breaker": {
+        "prefix": "breaker",
+        "body": [
+            "from core.circuit_breaker import CircuitBreaker",
+            "",
+            "@CircuitBreaker(",
+            "    failure_threshold=${1:5},",
+            "    timeout=${2:60},",
+            "    name='${3:service_name}'",
+            ")",
+            "def ${4:function_name}():",
+            "    ${5:# Protected function}",
+            "    pass",
+            "$0"
+        ],
+        "description": "Add circuit breaker protection"
+    },
+    "Cache Decorator": {
+        "prefix": "cache",
+        "body": [
+            "from core.cache import cached",
+            "",
+            "@cached(ttl=${1:60})",
+            "def ${2:function_name}(${3:params}):",
+            "    ${4:# Expensive operation}",
+            "    return ${5:result}",
+            "$0"
+        ],
+        "description": "Add caching with TTL"
+    },
+    "Config Load": {
+        "prefix": "config",
+        "body": [
+            "from core.config_manager import ConfigManager",
+            "",
+            "config = ConfigManager()",
+            "${1:api_key} = config.get('${2:BINANCE_API_KEY}')",
+            "$0"
+        ],
+        "description": "Load configuration from environment"
+    },
+    "Trading Signal": {
+        "prefix": "signal",
+        "body": [
+            "{",
+            "    'signal': '${1|BUY,SELL,NEUTRAL|}',",
+            "    'confidence': ${2:0.75},",
+            "    'price': ${3:50000},",
+            "    'stop_loss': ${4:49000},",
+            "    'take_profit': ${5:52000},",
+            "    'reason': '${6:Signal reason}'",
+            "}",
+            "$0"
+        ],
+        "description": "Trading signal dictionary"
+    },
+    "Async Function": {
+        "prefix": "asyncfn",
+        "body": [
+            "async def ${1:function_name}(${2:params}):",
+            "    \"\"\"",
+            "    ${3:Description}",
+            "    \"\"\"",
+            "    ${4:# Implementation}",
+            "    return ${5:result}",
+            "$0"
+        ],
+        "description": "Async function template"
+    },
+    "Dataclass": {
+        "prefix": "dataclass",
+        "body": [
+            "from dataclasses import dataclass",
+            "from typing import Optional",
+            "",
+            "@dataclass",
+            "class ${1:ClassName}:",
+            "    \"\"\"${2:Description}\"\"\"",
+            "    ${3:field_name}: ${4:str}",
+            "    ${5:optional_field}: Optional[${6:int}] = None",
+            "$0"
+        ],
+        "description": "Create a dataclass"
+    },
+    "Test Function": {
+        "prefix": "test",
+        "body": [
+            "def test_${1:function_name}():",
+            "    \"\"\"Test ${2:description}\"\"\"",
+            "    # Arrange",
+            "    ${3:# Setup test data}",
+            "    ",
+            "    # Act",
+            "    ${4:# Execute function}",
+            "    ",
+            "    # Assert",
+            "    assert ${5:condition}, '${6:Error message}'",
+            "$0"
+        ],
+        "description": "Create a test function"
+    },
+    "Main Guard": {
+        "prefix": "main",
+        "body": [
+            "if __name__ == '__main__':",
+            "    ${1:main()}",
+            "$0"
+        ],
+        "description": "Add main guard"
+    },
+    "Trading Bot Main Loop": {
+        "prefix": "botloop",
+        "body": [
+            "import time",
+            "from datetime import datetime",
+            "",
+            "def main():",
+            "    \"\"\"Main trading bot loop\"\"\"",
+            "    logger.info('Starting trading bot...')",
+            "    ",
+            "    while True:",
+            "        try:",
+            "            # Get market data",
+            "            ${1:data = get_market_data()}",
+            "            ",
+            "            # Analyze",
+            "            ${2:signal = analyze(data)}",
+            "            ",
+            "            # Execute",
+            "            if signal['signal'] != 'NEUTRAL':",
+            "                ${3:execute_trade(signal)}",
+            "            ",
+            "            # Wait",
+            "            time.sleep(${4:60})  # seconds",
+            "            ",
+            "        except KeyboardInterrupt:",
+            "            logger.info('Shutting down...')",
+            "            break",
+            "        except Exception as e:",
+            "            logger.error(f'Error in main loop: {e}')",
+            "            time.sleep(10)",
+            "",
+            "if __name__ == '__main__':",
+            "    main()",
+            "$0"
+        ],
+        "description": "Trading bot main loop template"
+    }
+}

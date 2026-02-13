@@ -68,7 +68,12 @@ env/
 # ═══════════════════════════════════════════════════════════════════
 # IDE
 # ═══════════════════════════════════════════════════════════════════
-.vscode/
+# VS Code - Allow shared configs, ignore personal workspace
+.vscode/*.code-workspace
+.vscode/settings.local.json
+# .vscode/ - Keeping shared configs (settings, launch, tasks, extensions)
+
+# Other IDEs
 .idea/
 *.swp
 *.swo

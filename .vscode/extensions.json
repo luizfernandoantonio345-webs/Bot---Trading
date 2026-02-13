@@ -1,0 +1,51 @@
+{
+    "recommendations": [
+        // Essential Python
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.pylint",
+        
+        // Code Quality
+        "usernamehw.errorlens",
+        "streetsidesoftware.code-spell-checker",
+        "oderwat.indent-rainbow",
+        "mechatroner.rainbow-csv",
+        
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "github.vscode-pull-request-github",
+        
+        // Productivity
+        "aaron-bond.better-comments",
+        "gruntfuggly.todo-tree",
+        "wayou.vscode-todo-highlight",
+        "alefragnani.bookmarks",
+        
+        // Markdown
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        
+        // Environment
+        "mikestead.dotenv",
+        
+        // Data & Charts
+        "randomfractalsinc.vscode-data-preview",
+        
+        // Docker (optional)
+        "ms-azuretools.vscode-docker",
+        
+        // REST Client (for API testing)
+        "humao.rest-client",
+        
+        // Python specific tools
+        "ms-python.isort",
+        "njpwerner.autodocstring",
+        "kevinrose.vsc-python-indent",
+        
+        // Database (if needed)
+        "mtxr.sqltools"
+    ]
+}

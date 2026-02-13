@@ -29,6 +29,18 @@ python3 main.py
 
 **📚 Documentação completa**: [COMO_COMECAR_AGORA.md](COMO_COMECAR_AGORA.md)
 
+## 💻 Usando VS Code?
+
+**[➡️ GUIA VS CODE: VS_CODE_SETUP.md](VS_CODE_SETUP.md)** 🔧
+
+Se você está desenvolvendo no VS Code, temos configurações otimizadas prontas:
+- ✅ Debugging configurado (F5 para rodar)
+- ✅ Tasks prontas (Ctrl+Shift+B)
+- ✅ Extensões recomendadas
+- ✅ Snippets de código
+- ✅ Formatação automática
+- ✅ Linting integrado
+
 ## ⚠️ ATENÇÃO
 
 **SEMPRE comece com TESTNET antes de usar em produção real.**
