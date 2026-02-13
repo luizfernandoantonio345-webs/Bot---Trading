@@ -1,0 +1,33 @@
+.dart_tool/
+.flutter/
+.packages
+pubspec.lock
+build/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
+.env
+*.jks
+*.keystore
+android/local.properties
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.xcframework
+coverage/
+.fvm/
+
+# Generated files
+*.g.dart
+*.freezed.dart
+*.config.dart
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
