@@ -1,0 +1,54 @@
+# ═══════════════════════════════════════════════════════════════════
+# WEIGHTS - PESOS PARA SCORE ENGINE
+# ═══════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════
+# PESOS DOS COMPONENTES DO SCORE (Total = 100 pontos)
+# ═══════════════════════════════════════════════════════════════════
+trend_weight: 0.25             # Tendência (25 pontos)
+momentum_weight: 0.20          # Momentum (20 pontos)
+confirmations_weight: 0.25     # Confirmações técnicas (25 pontos)
+risk_quality_weight: 0.20      # Qualidade de risco (20 pontos)
+context_weight: 0.10           # Contexto temporal/histórico (10 pontos)
+
+# ═══════════════════════════════════════════════════════════════════
+# THRESHOLDS DE DECISÃO
+# ═══════════════════════════════════════════════════════════════════
+threshold_no_trade: 65         # Score < 65 = NÃO OPERAR
+threshold_alert: 90            # Score 65-89 = ALERTA / Score ≥ 90 = EXECUTAR
+
+# ═══════════════════════════════════════════════════════════════════
+# AJUSTES DE LEARNING
+# ═══════════════════════════════════════════════════════════════════
+pattern_winner_bonus: 10       # Bonus para padrões vencedores
+pattern_loser_penalty: 15      # Penalização para padrões perdedores
+
+recent_losses_penalty: 10      # Penalização por losses recentes
+consecutive_wins_bonus: 5      # Bonus por wins consecutivos
+
+# ═══════════════════════════════════════════════════════════════════
+# PESOS POR TIMEFRAME (Consenso de Tendência)
+# ═══════════════════════════════════════════════════════════════════
+timeframe_weights:
+  D1: 0.35                     # Gráfico diário (35%)
+  H4: 0.30                     # 4 horas (30%)
+  H1: 0.20                     # 1 hora (20%)
+  M15: 0.15                    # 15 minutos (15%)
+
+# ═══════════════════════════════════════════════════════════════════
+# FILTROS ADICIONAIS
+# ═══════════════════════════════════════════════════════════════════
+min_confidence: 60.0           # Confiança mínima para executar (%)
+require_volume_confirmation: false  # Exigir confirmação de volume
+require_pattern_match: false   # Exigir padrão identificado
+
+# ═══════════════════════════════════════════════════════════════════
+# AJUSTES DE AGRESSIVIDADE
+# ═══════════════════════════════════════════════════════════════════
+# Modificadores baseados em performance
+hot_streak_multiplier: 1.2     # Multiplicador em hot streak
+cold_streak_multiplier: 0.7    # Multiplicador em cold streak
+
+# Ajuste de score baseado em winrate
+high_winrate_bonus: 5          # Bonus se winrate > 60%
+low_winrate_penalty: 10        # Penalty se winrate < 45%

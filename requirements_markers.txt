@@ -1,0 +1,16 @@
+# Flask for API server
+flask==3.0.0
+flask-cors==4.0.0
+
+# Existing bot dependencies (if not already installed)
+pandas>=2.0.0
+numpy>=1.24.0
+MetaTrader5>=5.0.45
+
+# Optional: WebSocket support (for Phase 2)
+# flask-socketio==5.3.5
+# python-socketio==5.10.0
+
+# Optional: Database (for Phase 3)
+# psycopg2-binary==2.9.9
+# sqlalchemy==2.0.23

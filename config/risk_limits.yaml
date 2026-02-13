@@ -1,0 +1,50 @@
+# ═══════════════════════════════════════════════════════════════════
+# RISK LIMITS - CONFIGURAÇÃO DE GESTÃO DE RISCO
+# ═══════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════
+# LIMITES DE PERDA
+# ═══════════════════════════════════════════════════════════════════
+max_daily_loss: 500.0          # Perda máxima diária em USD
+max_weekly_loss: 1500.0        # Perda máxima semanal em USD
+max_monthly_loss: 5000.0       # Perda máxima mensal em USD
+
+# ═══════════════════════════════════════════════════════════════════
+# METAS DE LUCRO
+# ═══════════════════════════════════════════════════════════════════
+daily_profit_target: 1000.0    # Meta diária em USD
+weekly_profit_target: 3000.0   # Meta semanal em USD
+
+# ═══════════════════════════════════════════════════════════════════
+# LIMITES OPERACIONAIS
+# ═══════════════════════════════════════════════════════════════════
+max_trades_per_day: 10         # Máximo de trades por dia
+max_consecutive_losses: 3      # Máximo de losses consecutivos
+
+# ═══════════════════════════════════════════════════════════════════
+# TAMANHO DE POSIÇÃO
+# ═══════════════════════════════════════════════════════════════════
+base_position_size: 0.01       # Tamanho base de posição (BTC)
+max_position_size: 0.10        # Tamanho máximo de posição
+min_position_size: 0.001       # Tamanho mínimo de posição
+
+# ═══════════════════════════════════════════════════════════════════
+# DRAWDOWN E EXPOSIÇÃO
+# ═══════════════════════════════════════════════════════════════════
+max_drawdown_pct: 15.0         # Drawdown máximo permitido (%)
+max_exposure_pct: 50.0         # Exposição máxima do capital (%)
+
+# ═══════════════════════════════════════════════════════════════════
+# ADAPTAÇÃO AUTOMÁTICA
+# ═══════════════════════════════════════════════════════════════════
+reduce_size_after_loss: true   # Reduzir tamanho após loss
+reduction_factor: 0.5          # Fator de redução (50%)
+
+pause_after_losses: true       # Pausar após sequência de losses
+pause_duration_minutes: 60     # Duração da pausa em minutos
+
+# ═══════════════════════════════════════════════════════════════════
+# RISCO/RETORNO
+# ═══════════════════════════════════════════════════════════════════
+min_risk_reward_ratio: 1.5     # Ratio mínimo risco/retorno
+max_risk_per_trade_pct: 2.0    # Risco máximo por trade (% do capital)
