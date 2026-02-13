@@ -1,0 +1,74 @@
+═══════════════════════════════════════════════════════════════
+🚀 QUICK START - VS CODE
+═══════════════════════════════════════════════════════════════
+
+PARA EXECUTAR O BOT NO VS CODE:
+
+1. SETUP RÁPIDO (UMA VEZ):
+   
+   python setup_vscode.py
+   
+   Ou siga: EXECUTAR_NO_VSCODE.md
+
+2. CONFIGURAR API KEYS:
+   
+   - Copie: cp .env.example .env
+   - Edite .env com suas keys
+   - Use TESTNET primeiro!
+   - Keys testnet: https://testnet.binance.vision/
+
+3. ABRIR NO VS CODE:
+   
+   code .
+
+4. INSTALAR EXTENSÕES:
+   
+   - Clique "Instalar Tudo" na notificação
+   - Aguarde instalação (2-3 min)
+
+5. EXECUTAR:
+   
+   Pressione F5
+   
+   Ou:
+   
+   python main.py
+
+═══════════════════════════════════════════════════════════════
+
+📚 DOCUMENTAÇÃO COMPLETA:
+
+   EXECUTAR_NO_VSCODE.md      - Guia passo a passo
+   VS_CODE_QUICK_START.md     - Referência rápida
+   VS_CODE_SETUP.md           - Setup completo
+   COMO_COMECAR_AGORA.md      - Guia geral
+
+═══════════════════════════════════════════════════════════════
+
+🐛 DEBUGGING:
+
+   F5         → Start/Continue
+   F10        → Step Over
+   F11        → Step Into
+   Shift+F5   → Stop
+   
+   Click na linha para breakpoint
+
+═══════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE:
+
+   ✓ SEMPRE comece com TESTNET
+   ✓ Configure .env com suas keys
+   ✓ Instale extensões recomendadas
+   ✓ Use Python 3.8+
+
+═══════════════════════════════════════════════════════════════
+
+🆘 PROBLEMAS?
+
+   1. Execute: python verify_setup.py
+   2. Veja: EXECUTAR_NO_VSCODE.md (seção Troubleshooting)
+   3. Verifique .env está configurado
+
+═══════════════════════════════════════════════════════════════

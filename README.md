@@ -4,7 +4,39 @@ Sistema de trading automatizado de nível institucional com análise multicamada
 
 ## 🚀 COMO COMEÇAR AGORA
 
-**[➡️ GUIA RÁPIDO: COMO_COMECAR_AGORA.md](COMO_COMECAR_AGORA.md)** ⭐
+### 💻 Usando VS Code? (RECOMENDADO)
+
+**[➡️ EXECUTAR_NO_VSCODE.md](EXECUTAR_NO_VSCODE.md)** ⭐ **COMECE AQUI!**
+
+**Setup Rápido (5 minutos):**
+```bash
+# 1. Clone e entre na pasta
+git clone https://github.com/luizfernandoantonio345-webs/Bot---Trading.git
+cd Bot---Trading
+
+# 2. Execute setup automático
+python setup_vscode.py
+
+# 3. Configure .env com suas API keys
+cp .env.example .env
+nano .env  # Adicione suas keys
+
+# 4. Abra no VS Code
+code .
+
+# 5. Pressione F5 para executar!
+```
+
+**📚 Guias VS Code:**
+- **[EXECUTAR_NO_VSCODE.md](EXECUTAR_NO_VSCODE.md)** - Guia completo passo a passo
+- **[VS_CODE_QUICK_START.md](VS_CODE_QUICK_START.md)** - Referência visual rápida
+- **[VS_CODE_SETUP.md](VS_CODE_SETUP.md)** - Configuração detalhada
+
+---
+
+### 📟 Usando Terminal/Outro IDE?
+
+**[➡️ GUIA RÁPIDO: COMO_COMECAR_AGORA.md](COMO_COMECAR_AGORA.md)**
 
 ### Início Rápido (15 minutos):
 
@@ -27,19 +59,9 @@ python3 verify_setup.py
 python3 main.py
 ```
 
-**📚 Documentação completa**: [COMO_COMECAR_AGORA.md](COMO_COMECAR_AGORA.md)
-
-## 💻 Usando VS Code?
-
-**[➡️ GUIA VS CODE: VS_CODE_SETUP.md](VS_CODE_SETUP.md)** 🔧
-
-Se você está desenvolvendo no VS Code, temos configurações otimizadas prontas:
-- ✅ Debugging configurado (F5 para rodar)
-- ✅ Tasks prontas (Ctrl+Shift+B)
-- ✅ Extensões recomendadas
-- ✅ Snippets de código
-- ✅ Formatação automática
-- ✅ Linting integrado
+**📚 Documentação completa**: 
+- **VS Code**: [EXECUTAR_NO_VSCODE.md](EXECUTAR_NO_VSCODE.md)
+- **Geral**: [COMO_COMECAR_AGORA.md](COMO_COMECAR_AGORA.md)
 
 ## ⚠️ ATENÇÃO
 
