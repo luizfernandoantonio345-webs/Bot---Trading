@@ -364,18 +364,21 @@ class OptimizedPositionSizer:
                     value=take_profit_price
                 )
             
-            # Validate direction consistency
-            if (entry_price < stop_loss_price and entry_price > take_profit_price):
-                raise ValidationException(
-                    "Invalid take profit for SHORT position",
-                    field='take_profit_price'
-                )
+            # Validate direction consistency for LONG
+            if entry_price > stop_loss_price:  # LONG position
+                if take_profit_price <= entry_price:
+                    raise ValidationException(
+                        "Take profit must be above entry price for LONG position",
+                        field='take_profit_price'
+                    )
             
-            if (entry_price > stop_loss_price and entry_price < take_profit_price):
-                raise ValidationException(
-                    "Invalid take profit for LONG position",
-                    field='take_profit_price'
-                )
+            # Validate direction consistency for SHORT
+            if entry_price < stop_loss_price:  # SHORT position
+                if take_profit_price >= entry_price:
+                    raise ValidationException(
+                        "Take profit must be below entry price for SHORT position",
+                        field='take_profit_price'
+                    )
     
     def _round_size(self, size: float, precision: int = 5) -> float:
         """Round position size to appropriate precision"""
