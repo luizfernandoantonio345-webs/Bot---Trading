@@ -199,7 +199,20 @@ Para dúvidas ou problemas:
 
 ## 💡 Ideias Futuras
 
-Confira o documento [IDEAS_FUTURAS.md](IDEAS_FUTURAS.md) com **10 ideias estratégicas** para evolução do bot:
+### 🚀 Para Integração Binance e Produção
+Confira o documento **[100_MELHORIAS_BINANCE.md](100_MELHORIAS_BINANCE.md)** com **100 melhorias práticas** para testes na Binance:
+- ✅ **16 melhorias CRÍTICAS** para implementar hoje
+- API & Conectividade (Rate limiting, WebSockets, Retry logic)
+- Gestão de Risco Avançada (Position sizing, Circuit breakers)
+- Performance & Otimização (Async, Cache, Database)
+- Monitoramento & Observabilidade (Prometheus, Grafana, Alertas)
+- Testes & Validação (Unit, Integration, Stress testing)
+- Segurança & Compliance (Encryption, Audit, 2FA)
+- DevOps & Infraestrutura (Docker, CI/CD, Auto-scaling)
+- **Checklist completo para produção**
+
+### 📚 Roadmap de Longo Prazo
+Veja também [IDEAS_FUTURAS.md](IDEAS_FUTURAS.md) com **10 ideias estratégicas** para evolução futura:
 - Sistema de Aprendizado por Reforço
 - Dashboard Web Interativo
 - Notificações Multi-Canal
